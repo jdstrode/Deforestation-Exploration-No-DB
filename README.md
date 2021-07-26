@@ -1,7 +1,8 @@
-# Project 2 - Deforestation in the Amazon Rain Forest 
-![rainForest](https://media.giphy.com/media/eGNpmOUeIIYUB4P4Al/giphy.gif)
+# Deforestation in the Amazon Rainforest 
 
-NOTE: the webpage for this project is only deployable locally.  To view it you will need to clone this repo and setup a MongoDB connection.  Further instructions for initial setup are [here](app_files/static/data/serversetup.txt)
+*__NOTE:__ The webpage for this project is only deployable locally.  To view it you will need to clone this repo and setup a MongoDB connection.  Further instructions for initial setup are [here](app_files/static/data/serversetup.txt).*
+
+_**A working version of this website is viewable and deployed to Github pages [here](app_files/static/data/serversetup.txt).  This version does not utilize an external database.**_
 
 # Developer/Student Commentary
 Within the repository you will find a group project that was originally submitted as part of the certification for the Data Science Bootcamp at Northwestern University.  I have since improved it significantly by adding a landing page, mapping page, and modifying the styling greatly. 
@@ -30,7 +31,5 @@ Deforestation Dataset was taken from [Kaggle](https://www.kaggle.com/mbogernetto
 
 ## Sample Plot: Deforestation for AC State from 2004-2019
 ![Plotting Deforestation over each Amazon State by Year](app_files/static/images/allstates.png)
-
-
 
 
