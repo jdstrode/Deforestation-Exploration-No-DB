@@ -1,6 +1,6 @@
 # Deforestation in the Amazon Rainforest 
 
----------------------
+*__NOTE:__ This is a functioning webpage, however mapbox map will not render without a working API key placed in a config.js file. Mapbox is a free service and an API key can be procured by signing up on their site [here]( https://www.mapbox.com/signup).*
 
 # Developer/Student Commentary
 Within the repository you will find a group project that was originally submitted as part of the certification for the Data Science Bootcamp at Northwestern University.  I have since improved it significantly by adding a landing page, mapping page, and modifying the styling greatly. 
