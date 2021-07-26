@@ -1,25 +1,27 @@
 // Create init function  
 
 function init() {
-    d3.json("api/all").then((incomingData) => {
-        let acState = incomingData[0].AC;
-        console.log(acState);
-        console.log(incomingData);
+    d3.json("../static/data/def_area_2004_2019.json").then((incomingData) => {
+        // console.log(incomingData);
+        // console.log(Object.values(incomingData));
+        let acState = Object.values(incomingData.AC);
+        // console.log(acState);
 
-        let years = incomingData[0]["Ano/Estados"];
+
+        let years = Object.values(incomingData["Ano/Estados"]);
         // console.log(years);
-            // Create chartData to insert into newPlot() function
+        // Create chartData to insert into newPlot() function
         var chartData = [{
             x: years,
             y: acState, 
-            name: "Deforestation By Brazilian States",
+            name: "Deforestation By Brazilian States (2004-2019)",
             type: "scatter",
             mode: "lines"
             }];
 
         // Format the layout of the plot
         var layoutLine = {
-        title: "Deforestation By Brazilian States",
+        title: "Deforestation By Brazilian States (2004-2019)",
 
       };
 
@@ -34,59 +36,60 @@ function getData() {
     let dropdownMenu = d3.select("#selDataset");
     var dataset = dropdownMenu.property("value");
 
-    console.log(dataset)
+    // console.log(dataset)
 
     var data = [];
-    console.log(data)
+    // console.log(data)
     
-        d3.json("api/all").then(incomingData => {
-            let years = incomingData[0]["Ano/Estados"];
-            console.log(incomingData);
+        d3.json("../static/data/def_area_2004_2019.json").then(incomingData => {
+            let years = Object.values(incomingData["Ano/Estados"]);
+            // console.log(incomingData);
             // console.log(years);
             // console.log(typeof years);
 
             if (dataset == "AC") {
-                data = incomingData[0].AC;
+                data = Object.values(incomingData.AC);
+                console.log(data);
             }
             else if (dataset == "AM") {
-                data = incomingData[0].AM;
+                data = Object.values(incomingData.AM);
             }
             else if (dataset == "AP") {
-                data =  incomingData[0].AP;
+                data =  Object.values(incomingData.AP);
             }
             else if (dataset == "MA") {
-                data =  incomingData[0].MA;
+                data =  Object.values(incomingData.MA);
             }
             else if (dataset == "MT") {
-                data =  incomingData[0].MT;
+                data =  Object.values(incomingData.MT);
             }
             else if (dataset == "PA") {
-                data =  incomingData[0].PA;
+                data =  Object.values(incomingData.PA);
             }
             else if (dataset == "RO") {
-                data =  incomingData[0].RO;
+                data =  Object.values(incomingData.RO);
             }
             else if (dataset == "RR") {
-                data =  incomingData[0].RR;
+                data =  Object.values(incomingData.RR);
             }
             else if (dataset == "TO") {
-                data =  incomingData[0].TO;
+                data =  Object.values(incomingData.TO);
             }
             else if (dataset == "AMZ LEGAL") {
-                data =  incomingData[0]["AMZ LEGAL"];
+                data =  Object.values(incomingData["AMZ LEGAL"]);
             }
 
             var chartData = [{
                 x: years,
                 y: data, 
-                name: "Deforestation By Brazilian States",
+                name: "Deforestation By Brazilian States (2004-2019)",
                 type: "scatter",
                 mode: "lines"
                 }];
     
             // Format the layout of the plot
             var layoutLine = {
-            title: "Deforestation By Brazilian States",
+            title: "Deforestation By Brazilian States (2004-2019)",
           };
     
         Plotly.newPlot("chart", chartData, layoutLine); 

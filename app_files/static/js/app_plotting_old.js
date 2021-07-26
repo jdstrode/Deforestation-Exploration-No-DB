@@ -1,13 +1,12 @@
-// Create init function  
 
 function init() {
-    d3.json("../data/def_area_2004_2019").then((incomingData) => {
-        let acState = incomingData[0].AC;
-        console.log(acState);
-        console.log(incomingData);
 
-        let years = incomingData[0]["Ano/Estados"];
-        // console.log(years);
+    d3.json("./data/def_area_2004_2019.json").then((incomingData) => {
+
+        let acState = Object.values(incomingData.AC);
+
+        let years = Object.values(incomingData["Ano/Estados"]).map(year => year);
+
             // Create chartData to insert into newPlot() function
         var chartData = [{
             x: years,
@@ -33,48 +32,43 @@ function getData() {
     // STEP A - Select the drop down element
     let dropdownMenu = d3.select("#selDataset");
     var dataset = dropdownMenu.property("value");
-
     console.log(dataset)
 
     var data = [];
-    console.log(data)
-        d3.json("../data/def_area_2004_2019").then(incomingData => {
-            let years = incomingData[0]["Ano/Estados"];
-            console.log(incomingData);
-            // console.log(years);
-            // console.log(typeof years);
+
+        d3.json("./data/def_area_2004_2019.json").then(incomingData => {
+            let years = Object.values(incomingData["Ano/Estados"]).map(year => year);
+            console.log(years);
+            console.log(typeof years);
 
             if (dataset == "AC") {
-                data = incomingData[0].AC;
+                data =  Object.values(incomingData.AC);
             }
             else if (dataset == "AM") {
-                data = incomingData[0].AM;
+                data = Object.values(incomingData.AM);
             }
             else if (dataset == "AP") {
-                data =  incomingData[0].AP;
+                data =  Object.values(incomingData.AP);
             }
             else if (dataset == "MA") {
-                data =  incomingData[0].MA;
+                data =  Object.values(incomingData.MA);
             }
             else if (dataset == "MT") {
-                data =  incomingData[0].MT;
+                data =  Object.values(incomingData.MT);
             }
             else if (dataset == "PA") {
-                data =  incomingData[0].PA;
+                data =  Object.values(incomingData.PA);
             }
             else if (dataset == "RO") {
-                data =  incomingData[0].RO;
+                data =  Object.values(incomingData.RO);
             }
             else if (dataset == "RR") {
-                data =  incomingData[0].RR;
+                data =  Object.values(incomingData.RR);
             }
             else if (dataset == "TO") {
-                data =  incomingData[0].TO;
+                data =  Object.values(incomingData.TO);
             }
-            else if (dataset == "AMZ LEGAL") {
-                data =  incomingData[0]["AMZ LEGAL"];
-            }
-
+  
             var chartData = [{
                 x: years,
                 y: data, 
@@ -93,5 +87,4 @@ function getData() {
         });
     }
 
-// console.log("hello")    
 init();
