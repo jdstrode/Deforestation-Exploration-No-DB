@@ -36,7 +36,7 @@ L.control.layers(baseMaps, overlayMaps, {
 }).addTo(myMap);
 
 function init() {
-  d3.json("../static/data/mapfile.json").then((incomingData) => {
+  d3.json("static/data/mapfile.json").then((incomingData) => {
       console.log(incomingData)
       let yearlyDeforestData = Object.values(incomingData["2004"]);
       console.log(yearlyDeforestData);
@@ -80,7 +80,7 @@ function getData() {
   var data = [];
   console.log(data);
   deforestation.clearLayers();
-    d3.json("../static/data/mapfile.json").then((incomingData) => {
+    d3.json("static/data/mapfile.json").then((incomingData) => {
       console.log(incomingData)
         let yearlyDeforestData = Object.values(incomingData["2004"]);
         console.log(yearlyDeforestData);

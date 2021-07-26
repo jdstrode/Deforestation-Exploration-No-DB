@@ -1,7 +1,6 @@
 // Create init function  
-
 function init() {
-    d3.json("../static/data/def_area_2004_2019.json").then((incomingData) => {
+    d3.json("static/data/def_area_2004_2019.json").then((incomingData) => {
         // console.log(incomingData);
         // console.log(Object.values(incomingData));
         let acState = Object.values(incomingData.AC);
@@ -41,7 +40,7 @@ function getData() {
     var data = [];
     // console.log(data)
     
-        d3.json("../static/data/def_area_2004_2019.json").then(incomingData => {
+        d3.json("static/data/def_area_2004_2019.json").then(incomingData => {
             let years = Object.values(incomingData["Ano/Estados"]);
             // console.log(incomingData);
             // console.log(years);
