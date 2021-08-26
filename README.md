@@ -1,5 +1,8 @@
 # Deforestation in the Amazon Rainforest 
 
+## Landing Page Preview
+![Landing Page Preview](static/images/index.png)
+
 *__NOTE:__ This is a functioning webpage, however mapbox map will not render without a working API key placed in a config.js file. Mapbox is a free service and an API key can be procured by signing up on their site [here]( https://www.mapbox.com/signup).*
 
 # Developer/Student Commentary
@@ -22,6 +25,15 @@ Deforestation Dataset was taken from [Kaggle](https://www.kaggle.com/mbogernetto
 * HTML, Bootstrap, and CSS were used to make the various webpages.  
 
 * The interactive charts and maps were developed using JavaScript, Plotly, and Leaflet.js.
+
+## Plotting Page Preview
+
+![Plotting Page Preview](static/images/plotchart.png)
+
+## Mapping Page Preview
+
+
+![Mapping Page Preview](static/images/plotmap.png)
 
 ## Sample Map: Deforestation of the Year 2004 
 
